@@ -1,0 +1,922 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B528D512691F69500BC39B1 /* Pay_FlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B528D502691F69500BC39B1 /* Pay_FlowApp.swift */; };
+		5B528D532691F69500BC39B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B528D522691F69500BC39B1 /* ContentView.swift */; };
+		5B528D552691F69700BC39B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B528D542691F69700BC39B1 /* Assets.xcassets */; };
+		5B528D582691F69700BC39B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B528D572691F69700BC39B1 /* Preview Assets.xcassets */; };
+		5B528D632691F69700BC39B1 /* Pay_FlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B528D622691F69700BC39B1 /* Pay_FlowTests.swift */; };
+		5B528D6E2691F69700BC39B1 /* Pay_FlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B528D6D2691F69700BC39B1 /* Pay_FlowUITests.swift */; };
+		5B528D7C2691F6E900BC39B1 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B528D7B2691F6E900BC39B1 /* Injectable.swift */; };
+		5B83CF0026952C93006CE36C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 5B83CEFF26952C93006CE36C /* ComposableArchitecture */; };
+		5B83CF18269531D0006CE36C /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5B83CF17269531CF006CE36C /* Staging.xcconfig */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B528D5F2691F69700BC39B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B528D452691F69500BC39B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B528D4C2691F69500BC39B1;
+			remoteInfo = "Pay Flow";
+		};
+		5B528D6A2691F69700BC39B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B528D452691F69500BC39B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B528D4C2691F69500BC39B1;
+			remoteInfo = "Pay Flow";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B528D4D2691F69500BC39B1 /* Pay Flow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pay Flow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B528D502691F69500BC39B1 /* Pay_FlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pay_FlowApp.swift; sourceTree = "<group>"; };
+		5B528D522691F69500BC39B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5B528D542691F69700BC39B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B528D572691F69700BC39B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5B528D592691F69700BC39B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B528D5E2691F69700BC39B1 /* Pay FlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pay FlowTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B528D622691F69700BC39B1 /* Pay_FlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pay_FlowTests.swift; sourceTree = "<group>"; };
+		5B528D642691F69700BC39B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B528D692691F69700BC39B1 /* Pay FlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pay FlowUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B528D6D2691F69700BC39B1 /* Pay_FlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pay_FlowUITests.swift; sourceTree = "<group>"; };
+		5B528D6F2691F69700BC39B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B528D7B2691F6E900BC39B1 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		5B83CF0A26953044006CE36C /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		5B83CF17269531CF006CE36C /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B528D4A2691F69500BC39B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B83CF0026952C93006CE36C /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B528D5B2691F69700BC39B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B528D662691F69700BC39B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B528D442691F69500BC39B1 = {
+			isa = PBXGroup;
+			children = (
+				5B528D4F2691F69500BC39B1 /* Pay Flow */,
+				5B528D612691F69700BC39B1 /* Pay FlowTests */,
+				5B528D6C2691F69700BC39B1 /* Pay FlowUITests */,
+				5B528D4E2691F69500BC39B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B528D4E2691F69500BC39B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B528D4D2691F69500BC39B1 /* Pay Flow.app */,
+				5B528D5E2691F69700BC39B1 /* Pay FlowTests.xctest */,
+				5B528D692691F69700BC39B1 /* Pay FlowUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B528D4F2691F69500BC39B1 /* Pay Flow */ = {
+			isa = PBXGroup;
+			children = (
+				5B83CF0426952D23006CE36C /* DI */,
+				5B83CF0326952D15006CE36C /* Application */,
+				5B83CF0226952CF2006CE36C /* System */,
+				5B83CF0126952CDB006CE36C /* Resources */,
+			);
+			path = "Pay Flow";
+			sourceTree = "<group>";
+		};
+		5B528D562691F69700BC39B1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5B528D572691F69700BC39B1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5B528D612691F69700BC39B1 /* Pay FlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B528D622691F69700BC39B1 /* Pay_FlowTests.swift */,
+				5B528D642691F69700BC39B1 /* Info.plist */,
+			);
+			path = "Pay FlowTests";
+			sourceTree = "<group>";
+		};
+		5B528D6C2691F69700BC39B1 /* Pay FlowUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5B528D6D2691F69700BC39B1 /* Pay_FlowUITests.swift */,
+				5B528D6F2691F69700BC39B1 /* Info.plist */,
+			);
+			path = "Pay FlowUITests";
+			sourceTree = "<group>";
+		};
+		5B83CF0126952CDB006CE36C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5B83CF0526952F64006CE36C /* Configs */,
+				5B528D562691F69700BC39B1 /* Preview Content */,
+				5B528D592691F69700BC39B1 /* Info.plist */,
+				5B528D542691F69700BC39B1 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5B83CF0226952CF2006CE36C /* System */ = {
+			isa = PBXGroup;
+			children = (
+				5B528D522691F69500BC39B1 /* ContentView.swift */,
+				5B528D502691F69500BC39B1 /* Pay_FlowApp.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		5B83CF0326952D15006CE36C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5B83CF0426952D23006CE36C /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				5B528D7B2691F6E900BC39B1 /* Injectable.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		5B83CF0526952F64006CE36C /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				5B83CF17269531CF006CE36C /* Staging.xcconfig */,
+				5B83CF0A26953044006CE36C /* Production.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B528D4C2691F69500BC39B1 /* Pay Flow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B528D722691F69700BC39B1 /* Build configuration list for PBXNativeTarget "Pay Flow" */;
+			buildPhases = (
+				5B528D492691F69500BC39B1 /* Sources */,
+				5B528D4A2691F69500BC39B1 /* Frameworks */,
+				5B528D4B2691F69500BC39B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pay Flow";
+			packageProductDependencies = (
+				5B83CEFF26952C93006CE36C /* ComposableArchitecture */,
+			);
+			productName = "Pay Flow";
+			productReference = 5B528D4D2691F69500BC39B1 /* Pay Flow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B528D5D2691F69700BC39B1 /* Pay FlowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B528D752691F69700BC39B1 /* Build configuration list for PBXNativeTarget "Pay FlowTests" */;
+			buildPhases = (
+				5B528D5A2691F69700BC39B1 /* Sources */,
+				5B528D5B2691F69700BC39B1 /* Frameworks */,
+				5B528D5C2691F69700BC39B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B528D602691F69700BC39B1 /* PBXTargetDependency */,
+			);
+			name = "Pay FlowTests";
+			productName = "Pay FlowTests";
+			productReference = 5B528D5E2691F69700BC39B1 /* Pay FlowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B528D682691F69700BC39B1 /* Pay FlowUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B528D782691F69700BC39B1 /* Build configuration list for PBXNativeTarget "Pay FlowUITests" */;
+			buildPhases = (
+				5B528D652691F69700BC39B1 /* Sources */,
+				5B528D662691F69700BC39B1 /* Frameworks */,
+				5B528D672691F69700BC39B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B528D6B2691F69700BC39B1 /* PBXTargetDependency */,
+			);
+			name = "Pay FlowUITests";
+			productName = "Pay FlowUITests";
+			productReference = 5B528D692691F69700BC39B1 /* Pay FlowUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B528D452691F69500BC39B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = NO;
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					5B528D4C2691F69500BC39B1 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					5B528D5D2691F69700BC39B1 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 5B528D4C2691F69500BC39B1;
+					};
+					5B528D682691F69700BC39B1 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 5B528D4C2691F69500BC39B1;
+					};
+				};
+			};
+			buildConfigurationList = 5B528D482691F69500BC39B1 /* Build configuration list for PBXProject "Pay Flow" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B528D442691F69500BC39B1;
+			packageReferences = (
+				5B83CEFE26952C92006CE36C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
+			productRefGroup = 5B528D4E2691F69500BC39B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B528D4C2691F69500BC39B1 /* Pay Flow */,
+				5B528D5D2691F69700BC39B1 /* Pay FlowTests */,
+				5B528D682691F69700BC39B1 /* Pay FlowUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B528D4B2691F69500BC39B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B528D582691F69700BC39B1 /* Preview Assets.xcassets in Resources */,
+				5B83CF18269531D0006CE36C /* Staging.xcconfig in Resources */,
+				5B528D552691F69700BC39B1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B528D5C2691F69700BC39B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B528D672691F69700BC39B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B528D492691F69500BC39B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B528D532691F69500BC39B1 /* ContentView.swift in Sources */,
+				5B528D7C2691F6E900BC39B1 /* Injectable.swift in Sources */,
+				5B528D512691F69500BC39B1 /* Pay_FlowApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B528D5A2691F69700BC39B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B528D632691F69700BC39B1 /* Pay_FlowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B528D652691F69700BC39B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B528D6E2691F69700BC39B1 /* Pay_FlowUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B528D602691F69700BC39B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B528D4C2691F69500BC39B1 /* Pay Flow */;
+			targetProxy = 5B528D5F2691F69700BC39B1 /* PBXContainerItemProxy */;
+		};
+		5B528D6B2691F69700BC39B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B528D4C2691F69500BC39B1 /* Pay Flow */;
+			targetProxy = 5B528D6A2691F69700BC39B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5B528D702691F69700BC39B1 /* Debug-Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B83CF17269531CF006CE36C /* Staging.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug-Staging";
+		};
+		5B528D712691F69700BC39B1 /* Release-Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B83CF0A26953044006CE36C /* Production.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release-Production";
+		};
+		5B528D732691F69700BC39B1 /* Debug-Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B83CF17269531CF006CE36C /* Staging.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Pay Flow/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Pay Flow/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.souzarodrigo.qa.Pay-Flow";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug-Staging";
+		};
+		5B528D742691F69700BC39B1 /* Release-Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Pay Flow/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Pay Flow/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.souzarodrigo.Pay-Flow";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Release-Production";
+		};
+		5B528D762691F69700BC39B1 /* Debug-Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B83CF17269531CF006CE36C /* Staging.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				INFOPLIST_FILE = "Pay FlowTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.souzarodrigo.Pay-FlowTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pay Flow.app/Pay Flow";
+			};
+			name = "Debug-Staging";
+		};
+		5B528D772691F69700BC39B1 /* Release-Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				INFOPLIST_FILE = "Pay FlowTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.souzarodrigo.Pay-FlowTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pay Flow.app/Pay Flow";
+			};
+			name = "Release-Production";
+		};
+		5B528D792691F69700BC39B1 /* Debug-Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B83CF17269531CF006CE36C /* Staging.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				INFOPLIST_FILE = "Pay FlowUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.souzarodrigo.Pay-FlowUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pay Flow";
+			};
+			name = "Debug-Staging";
+		};
+		5B528D7A2691F69700BC39B1 /* Release-Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				INFOPLIST_FILE = "Pay FlowUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.souzarodrigo.Pay-FlowUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pay Flow";
+			};
+			name = "Release-Production";
+		};
+		5B83CF0F26953174006CE36C /* Release-Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B83CF17269531CF006CE36C /* Staging.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release-Staging";
+		};
+		5B83CF1026953174006CE36C /* Release-Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Pay Flow/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Pay Flow/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.souzarodrigo.qa.Pay-Flow";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Release-Staging";
+		};
+		5B83CF1126953174006CE36C /* Release-Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				INFOPLIST_FILE = "Pay FlowTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.souzarodrigo.Pay-FlowTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pay Flow.app/Pay Flow";
+			};
+			name = "Release-Staging";
+		};
+		5B83CF1226953174006CE36C /* Release-Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				INFOPLIST_FILE = "Pay FlowUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.souzarodrigo.Pay-FlowUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pay Flow";
+			};
+			name = "Release-Staging";
+		};
+		5B83CF1326953180006CE36C /* Debug-Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B83CF0A26953044006CE36C /* Production.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug-Production";
+		};
+		5B83CF1426953180006CE36C /* Debug-Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Pay Flow/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Pay Flow/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.souzarodrigo.Pay-Flow";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug-Production";
+		};
+		5B83CF1526953180006CE36C /* Debug-Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				INFOPLIST_FILE = "Pay FlowTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.souzarodrigo.Pay-FlowTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pay Flow.app/Pay Flow";
+			};
+			name = "Debug-Production";
+		};
+		5B83CF1626953180006CE36C /* Debug-Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				INFOPLIST_FILE = "Pay FlowUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.souzarodrigo.Pay-FlowUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pay Flow";
+			};
+			name = "Debug-Production";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B528D482691F69500BC39B1 /* Build configuration list for PBXProject "Pay Flow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B528D702691F69700BC39B1 /* Debug-Staging */,
+				5B83CF1326953180006CE36C /* Debug-Production */,
+				5B528D712691F69700BC39B1 /* Release-Production */,
+				5B83CF0F26953174006CE36C /* Release-Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release-Production";
+		};
+		5B528D722691F69700BC39B1 /* Build configuration list for PBXNativeTarget "Pay Flow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B528D732691F69700BC39B1 /* Debug-Staging */,
+				5B83CF1426953180006CE36C /* Debug-Production */,
+				5B528D742691F69700BC39B1 /* Release-Production */,
+				5B83CF1026953174006CE36C /* Release-Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release-Production";
+		};
+		5B528D752691F69700BC39B1 /* Build configuration list for PBXNativeTarget "Pay FlowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B528D762691F69700BC39B1 /* Debug-Staging */,
+				5B83CF1526953180006CE36C /* Debug-Production */,
+				5B528D772691F69700BC39B1 /* Release-Production */,
+				5B83CF1126953174006CE36C /* Release-Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release-Production";
+		};
+		5B528D782691F69700BC39B1 /* Build configuration list for PBXNativeTarget "Pay FlowUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B528D792691F69700BC39B1 /* Debug-Staging */,
+				5B83CF1626953180006CE36C /* Debug-Production */,
+				5B528D7A2691F69700BC39B1 /* Release-Production */,
+				5B83CF1226953174006CE36C /* Release-Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release-Production";
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B83CEFE26952C92006CE36C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B83CEFF26952C93006CE36C /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B83CEFE26952C92006CE36C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5B528D452691F69500BC39B1 /* Project object */;
+}

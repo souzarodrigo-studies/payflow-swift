@@ -1,0 +1,19 @@
+//
+//  Production.xcconfig
+//  Pay Flow
+//
+//  Created by Rodrigo Santos on 06/07/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Staging.xcconfig
+
+// Server URL
+API_URL = api.pokemontcg.io
+API_VERSION = v1
+
+// App Settings
+APP_NAME = Pay Flow QA
+APP_BUNDLE_ID = io.souzarodrigo.qa.Pay-Flow
