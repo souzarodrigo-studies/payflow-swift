@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B528D512691F69500BC39B1 /* Pay_FlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B528D502691F69500BC39B1 /* Pay_FlowApp.swift */; };
-		5B528D532691F69500BC39B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B528D522691F69500BC39B1 /* ContentView.swift */; };
+		5B528D512691F69500BC39B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B528D502691F69500BC39B1 /* AppDelegate.swift */; };
 		5B528D552691F69700BC39B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B528D542691F69700BC39B1 /* Assets.xcassets */; };
 		5B528D582691F69700BC39B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B528D572691F69700BC39B1 /* Preview Assets.xcassets */; };
 		5B528D632691F69700BC39B1 /* Pay_FlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B528D622691F69700BC39B1 /* Pay_FlowTests.swift */; };
 		5B528D6E2691F69700BC39B1 /* Pay_FlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B528D6D2691F69700BC39B1 /* Pay_FlowUITests.swift */; };
-		5B528D7C2691F6E900BC39B1 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B528D7B2691F6E900BC39B1 /* Injectable.swift */; };
-		5B83CF0026952C93006CE36C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 5B83CEFF26952C93006CE36C /* ComposableArchitecture */; };
-		5B83CF18269531D0006CE36C /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5B83CF17269531CF006CE36C /* Staging.xcconfig */; };
+		5B5A0B972698DDD100DDFD94 /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = 5B5A0B962698DDD100DDFD94 /* Stinsen */; };
+		5B5A0B982698DDD100DDFD94 /* Stinsen in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 5B5A0B962698DDD100DDFD94 /* Stinsen */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5B5A0B9C2698DF9900DDFD94 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A0B9B2698DF9900DDFD94 /* MainCoordinator.swift */; };
+		5B5A0B9F2698E10800DDFD94 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A0B9E2698E10800DDFD94 /* LoadingView.swift */; };
+		5B5A0BA22698E23D00DDFD94 /* UnauthenticatedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A0BA12698E23D00DDFD94 /* UnauthenticatedCoordinator.swift */; };
+		5B5A0BA52698E2A300DDFD94 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A0BA42698E2A300DDFD94 /* LoginScreen.swift */; };
+		5B5A0BA72698EBAA00DDFD94 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A0BA62698EBAA00DDFD94 /* LoginFactory.swift */; };
+		5B5A0BA92698EC1F00DDFD94 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A0BA82698EC1F00DDFD94 /* LoginPresenter.swift */; };
+		5B5A0BAB2698EC8F00DDFD94 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A0BAA2698EC8F00DDFD94 /* LoginViewModel.swift */; };
+		5B5A0BAE2698FC3F00DDFD94 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5A0BAD2698FC3F00DDFD94 /* Launch Screen.storyboard */; };
+		5B5A0BB12698FF7800DDFD94 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B5A0BB02698FF7800DDFD94 /* GoogleService-Info.plist */; };
+		5BECC11626968CD10072030F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECC11526968CD10072030F /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +43,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5B5A0B992698DDD100DDFD94 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5B5A0B982698DDD100DDFD94 /* Stinsen in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5B528D4D2691F69500BC39B1 /* Pay Flow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pay Flow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B528D502691F69500BC39B1 /* Pay_FlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pay_FlowApp.swift; sourceTree = "<group>"; };
-		5B528D522691F69500BC39B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5B528D502691F69500BC39B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B528D542691F69700BC39B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B528D572691F69700BC39B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5B528D592691F69700BC39B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,9 +69,18 @@
 		5B528D692691F69700BC39B1 /* Pay FlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pay FlowUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B528D6D2691F69700BC39B1 /* Pay_FlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pay_FlowUITests.swift; sourceTree = "<group>"; };
 		5B528D6F2691F69700BC39B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B528D7B2691F6E900BC39B1 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		5B5A0B9B2698DF9900DDFD94 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		5B5A0B9E2698E10800DDFD94 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		5B5A0BA12698E23D00DDFD94 /* UnauthenticatedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthenticatedCoordinator.swift; sourceTree = "<group>"; };
+		5B5A0BA42698E2A300DDFD94 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		5B5A0BA62698EBAA00DDFD94 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
+		5B5A0BA82698EC1F00DDFD94 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		5B5A0BAA2698EC8F00DDFD94 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		5B5A0BAD2698FC3F00DDFD94 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		5B5A0BB02698FF7800DDFD94 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B83CF0A26953044006CE36C /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		5B83CF17269531CF006CE36C /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+		5BECC11526968CD10072030F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B83CF0026952C93006CE36C /* ComposableArchitecture in Frameworks */,
+				5B5A0B972698DDD100DDFD94 /* Stinsen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +109,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B47DFC82697DF29002C6CC3 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		5B528D442691F69500BC39B1 = {
 			isa = PBXGroup;
 			children = (
@@ -102,10 +139,11 @@
 		5B528D4F2691F69500BC39B1 /* Pay Flow */ = {
 			isa = PBXGroup;
 			children = (
-				5B83CF0426952D23006CE36C /* DI */,
 				5B83CF0326952D15006CE36C /* Application */,
-				5B83CF0226952CF2006CE36C /* System */,
+				5B5A0B802698D0A900DDFD94 /* Common */,
 				5B83CF0126952CDB006CE36C /* Resources */,
+				5B47DFC82697DF29002C6CC3 /* Support */,
+				5B83CF0226952CF2006CE36C /* System */,
 			);
 			path = "Pay Flow";
 			sourceTree = "<group>";
@@ -136,13 +174,75 @@
 			path = "Pay FlowUITests";
 			sourceTree = "<group>";
 		};
+		5B5A0B802698D0A900DDFD94 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5B5A0B9A2698DEA200DDFD94 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A0B9B2698DF9900DDFD94 /* MainCoordinator.swift */,
+				5B5A0BAF2698FD5800DDFD94 /* Factory */,
+				5B5A0B9D2698E0F300DDFD94 /* Loading */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5B5A0B9D2698E0F300DDFD94 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A0B9E2698E10800DDFD94 /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		5B5A0BA02698E23000DDFD94 /* Unauthenticated */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A0BA12698E23D00DDFD94 /* UnauthenticatedCoordinator.swift */,
+				5B5A0BAC2698F21E00DDFD94 /* Factory */,
+				5B5A0BA32698E27C00DDFD94 /* Login */,
+			);
+			path = Unauthenticated;
+			sourceTree = "<group>";
+		};
+		5B5A0BA32698E27C00DDFD94 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A0BA42698E2A300DDFD94 /* LoginScreen.swift */,
+				5B5A0BA82698EC1F00DDFD94 /* LoginPresenter.swift */,
+				5B5A0BAA2698EC8F00DDFD94 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5B5A0BAC2698F21E00DDFD94 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A0BA62698EBAA00DDFD94 /* LoginFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		5B5A0BAF2698FD5800DDFD94 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		5B83CF0126952CDB006CE36C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5B5A0BB02698FF7800DDFD94 /* GoogleService-Info.plist */,
+				5B528D592691F69700BC39B1 /* Info.plist */,
+				5B5A0BAD2698FC3F00DDFD94 /* Launch Screen.storyboard */,
+				5B528D542691F69700BC39B1 /* Assets.xcassets */,
 				5B83CF0526952F64006CE36C /* Configs */,
 				5B528D562691F69700BC39B1 /* Preview Content */,
-				5B528D592691F69700BC39B1 /* Info.plist */,
-				5B528D542691F69700BC39B1 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -150,8 +250,8 @@
 		5B83CF0226952CF2006CE36C /* System */ = {
 			isa = PBXGroup;
 			children = (
-				5B528D522691F69500BC39B1 /* ContentView.swift */,
-				5B528D502691F69500BC39B1 /* Pay_FlowApp.swift */,
+				5B528D502691F69500BC39B1 /* AppDelegate.swift */,
+				5BECC11526968CD10072030F /* SceneDelegate.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -159,16 +259,10 @@
 		5B83CF0326952D15006CE36C /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				5B5A0BA02698E23000DDFD94 /* Unauthenticated */,
+				5B5A0B9A2698DEA200DDFD94 /* Main */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		5B83CF0426952D23006CE36C /* DI */ = {
-			isa = PBXGroup;
-			children = (
-				5B528D7B2691F6E900BC39B1 /* Injectable.swift */,
-			);
-			path = DI;
 			sourceTree = "<group>";
 		};
 		5B83CF0526952F64006CE36C /* Configs */ = {
@@ -190,6 +284,7 @@
 				5B528D492691F69500BC39B1 /* Sources */,
 				5B528D4A2691F69500BC39B1 /* Frameworks */,
 				5B528D4B2691F69500BC39B1 /* Resources */,
+				5B5A0B992698DDD100DDFD94 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,7 +292,7 @@
 			);
 			name = "Pay Flow";
 			packageProductDependencies = (
-				5B83CEFF26952C93006CE36C /* ComposableArchitecture */,
+				5B5A0B962698DDD100DDFD94 /* Stinsen */,
 			);
 			productName = "Pay Flow";
 			productReference = 5B528D4D2691F69500BC39B1 /* Pay Flow.app */;
@@ -245,7 +340,6 @@
 		5B528D452691F69500BC39B1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = NO;
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
@@ -272,7 +366,7 @@
 			);
 			mainGroup = 5B528D442691F69500BC39B1;
 			packageReferences = (
-				5B83CEFE26952C92006CE36C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				5B5A0B952698DDD100DDFD94 /* XCRemoteSwiftPackageReference "stinsen" */,
 			);
 			productRefGroup = 5B528D4E2691F69500BC39B1 /* Products */;
 			projectDirPath = "";
@@ -290,8 +384,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5A0BAE2698FC3F00DDFD94 /* Launch Screen.storyboard in Resources */,
+				5B5A0BB12698FF7800DDFD94 /* GoogleService-Info.plist in Resources */,
 				5B528D582691F69700BC39B1 /* Preview Assets.xcassets in Resources */,
-				5B83CF18269531D0006CE36C /* Staging.xcconfig in Resources */,
 				5B528D552691F69700BC39B1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,9 +412,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B528D532691F69500BC39B1 /* ContentView.swift in Sources */,
-				5B528D7C2691F6E900BC39B1 /* Injectable.swift in Sources */,
-				5B528D512691F69500BC39B1 /* Pay_FlowApp.swift in Sources */,
+				5B5A0BA92698EC1F00DDFD94 /* LoginPresenter.swift in Sources */,
+				5B528D512691F69500BC39B1 /* AppDelegate.swift in Sources */,
+				5B5A0BA72698EBAA00DDFD94 /* LoginFactory.swift in Sources */,
+				5B5A0B9F2698E10800DDFD94 /* LoadingView.swift in Sources */,
+				5B5A0B9C2698DF9900DDFD94 /* MainCoordinator.swift in Sources */,
+				5B5A0BA22698E23D00DDFD94 /* UnauthenticatedCoordinator.swift in Sources */,
+				5BECC11626968CD10072030F /* SceneDelegate.swift in Sources */,
+				5B5A0BA52698E2A300DDFD94 /* LoginScreen.swift in Sources */,
+				5B5A0BAB2698EC8F00DDFD94 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,7 +582,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pay Flow/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = Z42V6W967K;
+				DEVELOPMENT_TEAM = VRS45YNM74;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Pay Flow/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -503,7 +604,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pay Flow/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = Z42V6W967K;
+				DEVELOPMENT_TEAM = VRS45YNM74;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Pay Flow/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -667,7 +768,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pay Flow/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = Z42V6W967K;
+				DEVELOPMENT_TEAM = VRS45YNM74;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Pay Flow/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -793,7 +894,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pay Flow/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = Z42V6W967K;
+				DEVELOPMENT_TEAM = VRS45YNM74;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Pay Flow/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -900,21 +1001,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5B83CEFE26952C92006CE36C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		5B5A0B952698DDD100DDFD94 /* XCRemoteSwiftPackageReference "stinsen" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			repositoryURL = "https://github.com/rundfunk47/stinsen";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.20.0;
+				minimumVersion = 1.0.11;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5B83CEFF26952C93006CE36C /* ComposableArchitecture */ = {
+		5B5A0B962698DDD100DDFD94 /* Stinsen */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5B83CEFE26952C92006CE36C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
+			package = 5B5A0B952698DDD100DDFD94 /* XCRemoteSwiftPackageReference "stinsen" */;
+			productName = Stinsen;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
