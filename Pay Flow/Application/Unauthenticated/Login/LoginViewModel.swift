@@ -9,4 +9,3 @@ import SwiftUI
 
 struct LoginViewModel {
 }
-

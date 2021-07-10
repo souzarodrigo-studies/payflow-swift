@@ -21,8 +21,6 @@ struct LoginScreen<Presenter: LoginPresenting>: View {
     @State private var showCertificates: Bool = false
     @State private var contentOffset = CGFloat(0)
     
-    let gradient = Gradient(colors: [.orange, .pink])
-    
     init(presenter: Presenter) {
         self.presenter = presenter
     }
@@ -30,12 +28,7 @@ struct LoginScreen<Presenter: LoginPresenting>: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
-                Rectangle()
-                    .fill(
-                        RadialGradient(gradient: gradient, center: .center, startRadius: 1, endRadius: 300)
-                    )
-                    .edgesIgnoringSafeArea(.all)
-                    .frame(height: 300)
+                GradientRetangle(height: CGFloat(300))
                 
                 VStack {
                     Image(colorScheme == .dark ? "Login Image Dark" : "Login Image")
@@ -100,7 +93,12 @@ struct LoginScreen<Presenter: LoginPresenting>: View {
 }
 
 struct LoginScreen_Previews: PreviewProvider {
+    
     static var previews: some View {
+        @StateObject var manager = AuthenticationManager()
         return LoginFactory.make(with: LoginViewModel())
+            .environmentObject(manager)
     }
 }
+
+

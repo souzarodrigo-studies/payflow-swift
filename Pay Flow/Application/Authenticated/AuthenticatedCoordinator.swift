@@ -19,8 +19,10 @@ class AuthenticatedCoordinator: NavigationCoordinatable {
 
     }
     
-    @ViewBuilder func start() -> some View {
-        HomeScreen()
+    @discardableResult
+    func start() -> some View {
+        let view = LoginFactory.make(with: LoginViewModel())
+        return view
     }
 }
 
