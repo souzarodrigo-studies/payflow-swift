@@ -9,6 +9,7 @@ import SwiftUI
 import Stinsen
 
 struct LoginScreen<Presenter: LoginPresenting>: View {
+    
     @EnvironmentObject var mainRouter: ViewRouter<MainCoordinator.Route>
     @EnvironmentObject var unauthenticatedRouter: NavigationRouter<UnauthenticatedCoordinator.Route>
     @EnvironmentObject var manager: AuthenticationManager
@@ -77,6 +78,17 @@ struct LoginScreen<Presenter: LoginPresenting>: View {
                     .padding()
                 }
                 .padding(.top, 60)
+                
+                VStack(alignment: .center) {
+                    Text("Loading...")
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                }
+                .padding(10)
+                .background(Color.secondary.colorInvert())
+                .foregroundColor(Color.primary)
+                .cornerRadius(20)
+                .opacity(manager.isLoading ? 1 : 0)
                 
             }
             .frame(maxHeight: .infinity, alignment: .top)

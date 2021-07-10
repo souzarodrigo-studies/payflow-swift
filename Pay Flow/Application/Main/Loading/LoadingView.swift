@@ -19,11 +19,11 @@ struct LoadingView: View {
         .onAppear(perform: {
             switch (manager.state) {
             case .signedIn:
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
                     router.route(to: .authenticated)
                 }
             case .signedOut:
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
                     router.route(to: .unauthenticated)
                 }
             }
