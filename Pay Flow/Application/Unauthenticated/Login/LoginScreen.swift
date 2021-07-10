@@ -11,6 +11,7 @@ import Stinsen
 struct LoginScreen<Presenter: LoginPresenting>: View {
     @EnvironmentObject var mainRouter: ViewRouter<MainCoordinator.Route>
     @EnvironmentObject var unauthenticatedRouter: NavigationRouter<UnauthenticatedCoordinator.Route>
+    @EnvironmentObject var manager: AuthenticationManager
     
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     
@@ -46,9 +47,7 @@ struct LoginScreen<Presenter: LoginPresenting>: View {
                         .padding(.horizontal, 70)
                         .multilineTextAlignment(.center)
                     
-                    Button(action: {
-                        print("Button action")
-                    }) {
+                    Button(action: manager.signIn) {
                         HStack {
                             Image("google-icon")
                                 .frame(alignment: .center)
@@ -69,10 +68,6 @@ struct LoginScreen<Presenter: LoginPresenting>: View {
                         }
                         .frame(width: 300, height: 30)
                         .padding(10.0)
-                        .background(
-                            Color("GoogleButtonBackground")
-                                .cornerRadius(6.0)
-                        )
                         .overlay(
                             RoundedRectangle(cornerRadius: 6.0)
                                 .stroke(lineWidth: 1.0)

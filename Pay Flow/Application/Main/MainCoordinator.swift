@@ -9,11 +9,12 @@ import SwiftUI
 import Stinsen
 
 class MainCoordinator: ViewCoordinatable {
+    
     var children = ViewChild()
     
     enum Route: ViewRoute {
         case unauthenticated
-//        case authenticated
+        case authenticated
     }
     
     func resolveRoute(route: Route) -> AnyCoordinatable {
@@ -24,12 +25,12 @@ class MainCoordinator: ViewCoordinatable {
                      UnauthenticatedCoordinator()
                 )
             )
-//        case .authenticated:
-//            return AnyCoordinatable(
-//                NavigationViewCoordinatable(
-//                    // AuthenticatedCoordinator()
-//                )
-//            )
+        case .authenticated:
+            return AnyCoordinatable(
+                NavigationViewCoordinatable(
+                     AuthenticatedCoordinator()
+                )
+            )
         }
     }
     
@@ -37,8 +38,5 @@ class MainCoordinator: ViewCoordinatable {
     func start() -> some View {
         return LoadingView()
     }
-    
-    init() {
-        
-    }
+
 }

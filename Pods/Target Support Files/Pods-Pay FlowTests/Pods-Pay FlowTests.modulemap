@@ -1,0 +1,6 @@
+framework module Pods_Pay_FlowTests {
+  umbrella header "Pods-Pay FlowTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
