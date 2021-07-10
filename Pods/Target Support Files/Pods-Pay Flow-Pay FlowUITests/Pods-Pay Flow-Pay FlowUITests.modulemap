@@ -1,6 +1,0 @@
-framework module Pods_Pay_Flow_Pay_FlowUITests {
-  umbrella header "Pods-Pay Flow-Pay FlowUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
