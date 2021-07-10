@@ -28,7 +28,7 @@ struct LoginScreen<Presenter: LoginPresenting>: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
-                GradientRetangle(height: CGFloat(300))
+                GradientRetangle(height: CGFloat(160))
                 
                 VStack {
                     Image(colorScheme == .dark ? "Login Image Dark" : "Login Image")
@@ -70,7 +70,7 @@ struct LoginScreen<Presenter: LoginPresenting>: View {
                     }
                     .padding()
                 }
-                .padding(.top, 60)
+                .offset(y: -75)
                 
                 VStack(alignment: .center) {
                     Text("Loading...")
@@ -96,7 +96,8 @@ struct LoginScreen_Previews: PreviewProvider {
     
     static var previews: some View {
         @StateObject var manager = AuthenticationManager()
-        return LoginFactory.make(with: LoginViewModel())
+        return LoginFactory
+            .make(with: LoginViewModel())
             .environmentObject(manager)
     }
 }

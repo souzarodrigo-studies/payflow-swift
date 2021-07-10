@@ -21,7 +21,7 @@ class AuthenticatedCoordinator: NavigationCoordinatable {
     
     @discardableResult
     func start() -> some View {
-        let view = LoginFactory.make(with: LoginViewModel())
+        let view = HomeFactory.make(with: HomeViewModel())
         return view
     }
 }

@@ -24,15 +24,36 @@ struct HomeScreen<Presenter: HomePresenting>: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
-                GradientRetangle(height: CGFloat(160))
+                GradientRetangle(height: CGFloat(80))
                 
-                VStack {
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Ola, ")
+                            .font(.title)
+                            .foregroundColor(.white)
+                            +
+                            Text("\(manager.user.profile.name)")
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(.white)
+                        
+                        Text("Mantenha suas contas em dias")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                    }
+                    Spacer()
+                }
+                .offset(y: -55)
+                .padding(.leading, 24)
+                .padding(.trailing, 24)
+                
+                ZStack {
                     Rectangle()
                         .fill(Color("HomeCardBackground"))
-                        .frame(width: 327, height: 80)
-                        .cornerRadius(5)
+                        .frame(width: 340, height: 80)
+                        .cornerRadius(8)
                 }
-                .padding(.top, 120)
+                .offset(y: 40)
                 
             }
             .frame(maxHeight: .infinity, alignment: .top)
