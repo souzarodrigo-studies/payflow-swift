@@ -30,6 +30,9 @@
 		5B5A0BC726994DE700DDFD94 /* AuthenticatedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A0BC626994DE700DDFD94 /* AuthenticatedCoordinator.swift */; };
 		5B5A0BCE26994EDA00DDFD94 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A0BCD26994EDA00DDFD94 /* HomeScreen.swift */; };
 		5B5A0BD02699507B00DDFD94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A0BCF2699507B00DDFD94 /* ContentView.swift */; };
+		5B68A7AD269B63BF00AB0AE5 /* RegisteredCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68A7AC269B63BF00AB0AE5 /* RegisteredCard.swift */; };
+		5B68A7AF269B66FA00AB0AE5 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68A7AE269B66FA00AB0AE5 /* HomeHeader.swift */; };
+		5B68A7B1269C947E00AB0AE5 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68A7B0269C947E00AB0AE5 /* AsyncImage.swift */; };
 		5BB06B41269A21EC001E1BF7 /* GradientRetangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB06B40269A21EC001E1BF7 /* GradientRetangle.swift */; };
 		5BB06B43269A3EAC001E1BF7 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB06B42269A3EAC001E1BF7 /* HomeFactory.swift */; };
 		5BB06B45269A3ED8001E1BF7 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB06B44269A3ED8001E1BF7 /* HomePresenter.swift */; };
@@ -101,6 +104,9 @@
 		5B5A0BC626994DE700DDFD94 /* AuthenticatedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedCoordinator.swift; sourceTree = "<group>"; };
 		5B5A0BCD26994EDA00DDFD94 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		5B5A0BCF2699507B00DDFD94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5B68A7AC269B63BF00AB0AE5 /* RegisteredCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredCard.swift; sourceTree = "<group>"; };
+		5B68A7AE269B66FA00AB0AE5 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
+		5B68A7B0269C947E00AB0AE5 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 		5B83CF0A26953044006CE36C /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		5B83CF17269531CF006CE36C /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		5BB06B40269A21EC001E1BF7 /* GradientRetangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientRetangle.swift; sourceTree = "<group>"; };
@@ -324,11 +330,21 @@
 		5B5A0BC926994E8D00DDFD94 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5B68A7AB269B638500AB0AE5 /* Components */,
 				5B5A0BCD26994EDA00DDFD94 /* HomeScreen.swift */,
 				5BB06B44269A3ED8001E1BF7 /* HomePresenter.swift */,
 				5BB06B46269A3EE2001E1BF7 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		5B68A7AB269B638500AB0AE5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5B68A7AC269B63BF00AB0AE5 /* RegisteredCard.swift */,
+				5B68A7AE269B66FA00AB0AE5 /* HomeHeader.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		5B83CF0126952CDB006CE36C /* Resources */ = {
@@ -376,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				5BB06B40269A21EC001E1BF7 /* GradientRetangle.swift */,
+				5B68A7B0269C947E00AB0AE5 /* AsyncImage.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -692,9 +709,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B68A7B1269C947E00AB0AE5 /* AsyncImage.swift in Sources */,
 				5BB06B47269A3EE2001E1BF7 /* HomeViewModel.swift in Sources */,
+				5B68A7AD269B63BF00AB0AE5 /* RegisteredCard.swift in Sources */,
 				5B5A0BA92698EC1F00DDFD94 /* LoginPresenter.swift in Sources */,
 				5B528D512691F69500BC39B1 /* AppDelegate.swift in Sources */,
+				5B68A7AF269B66FA00AB0AE5 /* HomeHeader.swift in Sources */,
 				5B5A0BD02699507B00DDFD94 /* ContentView.swift in Sources */,
 				5B5A0BA72698EBAA00DDFD94 /* LoginFactory.swift in Sources */,
 				5B5A0BC52699437200DDFD94 /* AuthenticationManager.swift in Sources */,

@@ -24,36 +24,12 @@ struct HomeScreen<Presenter: HomePresenting>: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
-                GradientRetangle(height: CGFloat(80))
+                GradientRetangle(height: CGFloat(60), factorOfStatedRadius: CGFloat(0.7))
                 
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text("Ola, ")
-                            .font(.title)
-                            .foregroundColor(.white)
-                            +
-                            Text("\(manager.user.profile.name)")
-                            .font(.title)
-                            .bold()
-                            .foregroundColor(.white)
-                        
-                        Text("Mantenha suas contas em dias")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                    }
-                    Spacer()
-                }
-                .offset(y: -55)
-                .padding(.leading, 24)
-                .padding(.trailing, 24)
-                
-                ZStack {
-                    Rectangle()
-                        .fill(Color("HomeCardBackground"))
-                        .frame(width: 340, height: 80)
-                        .cornerRadius(8)
-                }
-                .offset(y: 40)
+                HomeHeader(name: manager.user.profile.name, image: manager.user.profile.imageURL(withDimension: 48).absoluteString)
+
+                RegisteredCard()
+                .offset(y: 25)
                 
             }
             .frame(maxHeight: .infinity, alignment: .top)
@@ -61,13 +37,5 @@ struct HomeScreen<Presenter: HomePresenting>: View {
             .navigationBarHidden(true)
         }
         .navigationViewStyle(StackNavigationViewStyle())
-    }
-}
-
-struct HomeScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        @StateObject var manager = AuthenticationManager()
-        return HomeFactory.make(with: HomeViewModel())
-            .environmentObject(manager)
     }
 }

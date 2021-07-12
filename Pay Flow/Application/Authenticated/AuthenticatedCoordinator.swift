@@ -9,7 +9,7 @@ import SwiftUI
 import Stinsen
 
 class AuthenticatedCoordinator: NavigationCoordinatable {
-    var navigationStack: NavigationStack = NavigationStack()
+    var navigationStack = NavigationStack()
 
     enum Route: NavigationRoute {
 
@@ -24,5 +24,8 @@ class AuthenticatedCoordinator: NavigationCoordinatable {
         let view = HomeFactory.make(with: HomeViewModel())
         return view
     }
-}
+    
+    init() {
 
+    }
+}

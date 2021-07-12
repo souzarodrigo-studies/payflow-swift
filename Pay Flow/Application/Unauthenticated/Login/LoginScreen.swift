@@ -28,7 +28,7 @@ struct LoginScreen<Presenter: LoginPresenting>: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
-                GradientRetangle(height: CGFloat(160))
+                GradientRetangle(height: CGFloat(170), factorOfStatedRadius: CGFloat(0.5))
                 
                 VStack {
                     Image(colorScheme == .dark ? "Login Image Dark" : "Login Image")
@@ -37,6 +37,7 @@ struct LoginScreen<Presenter: LoginPresenting>: View {
                         .padding()
                     
                     Text("Organize seus boletos em um só lugar")
+                        .frame(height: 150)
                         .font(.system(size: 32, weight: .semibold))
                         .padding(.horizontal, 70)
                         .multilineTextAlignment(.center)
@@ -68,9 +69,10 @@ struct LoginScreen<Presenter: LoginPresenting>: View {
                                 .fill(Color.gray)
                         )
                     }
+                    .offset(y: 10)
                     .padding()
                 }
-                .offset(y: -75)
+                .offset(y: -70)
                 
                 VStack(alignment: .center) {
                     Text("Loading...")
