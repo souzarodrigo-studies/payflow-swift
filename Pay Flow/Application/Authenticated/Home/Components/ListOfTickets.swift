@@ -9,10 +9,18 @@ import SwiftUI
 
 struct ListOfTickets: View {
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(1...100, id: \.self) { value in
-                    Text("Row \(value)")
+        VStack {
+            HeaderOfTickets()
+            .padding(.top, 22)
+            .padding(.horizontal, 24)
+            
+            ScrollView {
+                LazyVStack(alignment: .center) {
+                    ForEach(1...100, id: \.self) { value in
+                        ItemOfTickets()
+                            .padding(.top, 22)
+                            .padding(.horizontal, 24)
+                    }
                 }
             }
         }
@@ -24,3 +32,4 @@ struct ListOfTickets_Previews: PreviewProvider {
         ListOfTickets()
     }
 }
+

@@ -30,6 +30,9 @@
 		5B5A0BC726994DE700DDFD94 /* AuthenticatedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A0BC626994DE700DDFD94 /* AuthenticatedCoordinator.swift */; };
 		5B5A0BCE26994EDA00DDFD94 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A0BCD26994EDA00DDFD94 /* HomeScreen.swift */; };
 		5B5A0BD02699507B00DDFD94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A0BCF2699507B00DDFD94 /* ContentView.swift */; };
+		5B62271626A1CC5F0091CED7 /* ToolBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62271526A1CC5F0091CED7 /* ToolBarFactory.swift */; };
+		5B62271826A20B560091CED7 /* HeaderOfTickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62271726A20B560091CED7 /* HeaderOfTickets.swift */; };
+		5B62271A26A20B880091CED7 /* ItemOfTickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62271926A20B880091CED7 /* ItemOfTickets.swift */; };
 		5B68A7AD269B63BF00AB0AE5 /* RegisteredCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68A7AC269B63BF00AB0AE5 /* RegisteredCard.swift */; };
 		5B68A7AF269B66FA00AB0AE5 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68A7AE269B66FA00AB0AE5 /* HomeHeader.swift */; };
 		5B68A7B1269C947E00AB0AE5 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68A7B0269C947E00AB0AE5 /* AsyncImage.swift */; };
@@ -39,7 +42,7 @@
 		5BB06B47269A3EE2001E1BF7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB06B46269A3EE2001E1BF7 /* HomeViewModel.swift */; };
 		5BCD722C269DF7290047BA15 /* LoadingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCD722B269DF7290047BA15 /* LoadingCoordinator.swift */; };
 		5BCD722F269DF7980047BA15 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCD722E269DF7980047BA15 /* LoadingScreen.swift */; };
-		5BCD723226A0B8D70047BA15 /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCD723126A0B8D70047BA15 /* ToolBar.swift */; };
+		5BCD723226A0B8D70047BA15 /* ToolBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCD723126A0B8D70047BA15 /* ToolBarScreen.swift */; };
 		5BCD723426A1188B0047BA15 /* ListOfTickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCD723326A1188B0047BA15 /* ListOfTickets.swift */; };
 		5BECC11626968CD10072030F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BECC11526968CD10072030F /* SceneDelegate.swift */; };
 		CF1BE853CED9680D4B02BE87 /* Pods_Pay_Flow_Pay_FlowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C73BA51D6D79B41A2BEF8D8 /* Pods_Pay_Flow_Pay_FlowUITests.framework */; };
@@ -108,6 +111,9 @@
 		5B5A0BC626994DE700DDFD94 /* AuthenticatedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedCoordinator.swift; sourceTree = "<group>"; };
 		5B5A0BCD26994EDA00DDFD94 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		5B5A0BCF2699507B00DDFD94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5B62271526A1CC5F0091CED7 /* ToolBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarFactory.swift; sourceTree = "<group>"; };
+		5B62271726A20B560091CED7 /* HeaderOfTickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOfTickets.swift; sourceTree = "<group>"; };
+		5B62271926A20B880091CED7 /* ItemOfTickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemOfTickets.swift; sourceTree = "<group>"; };
 		5B68A7AC269B63BF00AB0AE5 /* RegisteredCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredCard.swift; sourceTree = "<group>"; };
 		5B68A7AE269B66FA00AB0AE5 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
 		5B68A7B0269C947E00AB0AE5 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
@@ -119,7 +125,7 @@
 		5BB06B46269A3EE2001E1BF7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5BCD722B269DF7290047BA15 /* LoadingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCoordinator.swift; sourceTree = "<group>"; };
 		5BCD722E269DF7980047BA15 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
-		5BCD723126A0B8D70047BA15 /* ToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
+		5BCD723126A0B8D70047BA15 /* ToolBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarScreen.swift; sourceTree = "<group>"; };
 		5BCD723326A1188B0047BA15 /* ListOfTickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfTickets.swift; sourceTree = "<group>"; };
 		5BECC11526968CD10072030F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7905A4A21490DA2C8143645A /* Pods-Pay Flow.debug-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pay Flow.debug-production.xcconfig"; path = "Target Support Files/Pods-Pay Flow/Pods-Pay Flow.debug-production.xcconfig"; sourceTree = "<group>"; };
@@ -332,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				5BB06B42269A3EAC001E1BF7 /* HomeFactory.swift */,
+				5B62271526A1CC5F0091CED7 /* ToolBarFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -353,6 +360,8 @@
 				5B68A7AC269B63BF00AB0AE5 /* RegisteredCard.swift */,
 				5B68A7AE269B66FA00AB0AE5 /* HomeHeader.swift */,
 				5BCD723326A1188B0047BA15 /* ListOfTickets.swift */,
+				5B62271726A20B560091CED7 /* HeaderOfTickets.swift */,
+				5B62271926A20B880091CED7 /* ItemOfTickets.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -428,7 +437,7 @@
 		5BCD723026A0B8900047BA15 /* ToolBar */ = {
 			isa = PBXGroup;
 			children = (
-				5BCD723126A0B8D70047BA15 /* ToolBar.swift */,
+				5BCD723126A0B8D70047BA15 /* ToolBarScreen.swift */,
 			);
 			path = ToolBar;
 			sourceTree = "<group>";
@@ -750,8 +759,9 @@
 				5B68A7AD269B63BF00AB0AE5 /* RegisteredCard.swift in Sources */,
 				5B5A0BA92698EC1F00DDFD94 /* LoginPresenter.swift in Sources */,
 				5B528D512691F69500BC39B1 /* AppDelegate.swift in Sources */,
-				5BCD723226A0B8D70047BA15 /* ToolBar.swift in Sources */,
+				5BCD723226A0B8D70047BA15 /* ToolBarScreen.swift in Sources */,
 				5B68A7AF269B66FA00AB0AE5 /* HomeHeader.swift in Sources */,
+				5B62271A26A20B880091CED7 /* ItemOfTickets.swift in Sources */,
 				5B5A0BD02699507B00DDFD94 /* ContentView.swift in Sources */,
 				5B5A0BA72698EBAA00DDFD94 /* LoginFactory.swift in Sources */,
 				5B5A0BC52699437200DDFD94 /* AuthenticationManager.swift in Sources */,
@@ -762,7 +772,9 @@
 				5B5A0BA22698E23D00DDFD94 /* UnauthenticatedCoordinator.swift in Sources */,
 				5B5A0BC726994DE700DDFD94 /* AuthenticatedCoordinator.swift in Sources */,
 				5BECC11626968CD10072030F /* SceneDelegate.swift in Sources */,
+				5B62271626A1CC5F0091CED7 /* ToolBarFactory.swift in Sources */,
 				5BB06B43269A3EAC001E1BF7 /* HomeFactory.swift in Sources */,
+				5B62271826A20B560091CED7 /* HeaderOfTickets.swift in Sources */,
 				5BCD722C269DF7290047BA15 /* LoadingCoordinator.swift in Sources */,
 				5BB06B41269A21EC001E1BF7 /* GradientRetangle.swift in Sources */,
 				5B5A0BA52698E2A300DDFD94 /* LoginScreen.swift in Sources */,

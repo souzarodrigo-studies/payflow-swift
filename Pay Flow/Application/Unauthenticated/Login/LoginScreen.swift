@@ -28,7 +28,7 @@ struct LoginScreen<Presenter: LoginPresenting>: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
-                GradientRetangle(height: CGFloat(170), factorOfStatedRadius: CGFloat(0.9))
+                GradientRetangle(height: CGFloat(170), startRadius: CGFloat(100))
                 
                 VStack {
                     Image(colorScheme == .dark ? "Login Image Dark" : "Login Image")

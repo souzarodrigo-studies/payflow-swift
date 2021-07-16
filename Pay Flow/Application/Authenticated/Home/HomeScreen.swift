@@ -17,7 +17,7 @@ struct HomeScreen<Presenter: HomePresenting>: View {
     
     @ObservedObject private var presenter: Presenter
     
-    let boundsListOffset = CGFloat(120)
+    let boundsListOffset = CGFloat(105)
     let boundsRegisterOffset = CGFloat(20)
     
     init(presenter: Presenter) {
@@ -28,7 +28,7 @@ struct HomeScreen<Presenter: HomePresenting>: View {
         NavigationView {
             GeometryReader { bounds in
                 ZStack(alignment: .top) {
-                    GradientRetangle(height: CGFloat(60), factorOfStatedRadius: CGFloat(1))
+                    GradientRetangle(height: CGFloat(60), startRadius: CGFloat(20))
                     
                     HomeHeader(name: manager.user.profile.name, image: manager.user.profile.imageURL(withDimension: 48).absoluteString)
                     
@@ -36,15 +36,14 @@ struct HomeScreen<Presenter: HomePresenting>: View {
                         .offset(y: boundsRegisterOffset)
                     
                     ListOfTickets()
-                        .frame(height: bounds.size.height - 140)
                         .offset(y: boundsListOffset)
+                        .frame(height: abs(bounds.size.height - 160))
                     
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
                 .navigationBarHidden(true)
             }
         }
-        .background(Color(.clear))
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }

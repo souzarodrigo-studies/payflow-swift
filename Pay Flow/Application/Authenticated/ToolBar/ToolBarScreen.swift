@@ -16,7 +16,7 @@ enum ToolBarItens: String, CaseIterable {
 
 var tabs: [ToolBarItens] = [.Home, .Add, .List ]
 
-struct ToolBar: View {
+struct ToolBarScreen: View {
     
     @State var selectedTab: ToolBarItens = .Home
     @Namespace var animation
@@ -56,14 +56,15 @@ struct ToolBar: View {
                             TabButton(toobarItem: tab, animation: animation, selectedTab: $selectedTab)
                         }
                     }
-                    .frame(width: bounds.size.width, height: 80, alignment: .bottom)
+                    .frame(width: bounds.size.width, height: 100, alignment: .bottom)
                     .padding(.bottom, edges!.bottom == 0 ? 15 : edges!.bottom)
                     .background(
-                        LinearGradient(
-                            gradient: Gradient(colors: [.white, .white.opacity(0.0)]),
-                            startPoint: .bottom,
-                            endPoint: .top
-                        )
+                        LinearGradient(gradient: Gradient(colors: [.white.opacity(1), .white.opacity(0.5)]), startPoint: .bottom, endPoint: .top)
+                            .mask(
+                                Rectangle()
+                                    .frame(width: bounds.size.width, height: 100)
+                                    .blur(radius: 10)
+                            )
                     )
                 }
                 .frame(width: bounds.size.width, height: bounds.size.height, alignment: .bottom)
@@ -73,9 +74,9 @@ struct ToolBar: View {
     }
 }
 
-struct ToolBar_Previews: PreviewProvider {
+struct ToolBarScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ToolBar()
+        ToolBarScreen()
     }
 }
 
@@ -84,6 +85,9 @@ struct TabButton: View {
     var animation: Namespace.ID
     
     @Binding var selectedTab: ToolBarItens
+    
+    @State private var enabled = false
+    @State private var dragAmount = CGSize.zero
     
     var body: some View {
         Image(toobarItem.rawValue)
@@ -94,9 +98,17 @@ struct TabButton: View {
                     selectedTab == toobarItem ? Color(#colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)) : Color.black.opacity(0.2)
                 
             )
+            .offset(self.dragAmount)
             .frame(width: toobarItem == .Add ? 54 : 24, height: toobarItem == .Add ? 54 : 24)
             .padding(.horizontal, toobarItem == .Add ? 46 : 0)
-            
+            .gesture(
+                DragGesture()
+                    .onChanged { self.dragAmount = $0.translation }
+                    .onEnded { _ in
+                        self.dragAmount = .zero
+                        self.enabled.toggle()
+                    }
+            )
             .onTapGesture {
                 withAnimation{
                     selectedTab = toobarItem

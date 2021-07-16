@@ -42,9 +42,8 @@ final class AuthenticatedCoordinator: ViewCoordinatable {
     
     @discardableResult
     func start() -> some View {
-//        let view = HomeFactory.make(with: HomeViewModel())
-//        return view
-        return ToolBar()
+        let view = ToolBarFactory.make()
+        return view
     }
     
     init() {
