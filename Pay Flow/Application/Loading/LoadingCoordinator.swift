@@ -1,14 +1,14 @@
 //
-//  UnauthenticatedCoordinator.swift
+//  LoadingCoordinator.swift
 //  Pay Flow
 //
-//  Created by Rodrigo Santos on 09/07/21.
+//  Created by Rodrigo Santos on 13/07/21.
 //
 
 import SwiftUI
 import Stinsen
 
-final class UnauthenticatedCoordinator: NavigationCoordinatable {
+final class LoadingCoordinator: NavigationCoordinatable {
     var navigationStack = NavigationStack()
     
     enum Route: NavigationRoute {
@@ -24,11 +24,11 @@ final class UnauthenticatedCoordinator: NavigationCoordinatable {
     
     @discardableResult
     func start() -> some View {
-        let view = LoginFactory.make(with: LoginViewModel())
-        return view
+        return LoadingScreen()
     }
     
     init() {
 
     }
 }
+

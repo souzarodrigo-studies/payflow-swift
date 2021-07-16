@@ -17,6 +17,7 @@ struct ContentView: View {
         )
         .environmentObject(manager)
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

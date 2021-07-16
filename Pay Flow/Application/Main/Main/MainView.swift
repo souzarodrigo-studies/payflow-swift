@@ -8,31 +8,33 @@
 import SwiftUI
 import Stinsen
 
-struct LoadingView: View {
+struct MainView: View {
     @EnvironmentObject var router: ViewRouter<MainCoordinator.Route>
     @EnvironmentObject var manager: AuthenticationManager
     
     var body: some View {
-        VStack {
-            Text("Loading ...")
-        }
+        VStack{}
         .onAppear(perform: {
             switch (manager.state) {
             case .signedIn:
-                DispatchQueue.main.asyncAfter(deadline: .now()) {
+                DispatchQueue.main.async {
                     router.route(to: .authenticated)
                 }
             case .signedOut:
-                DispatchQueue.main.asyncAfter(deadline: .now()) {
+                DispatchQueue.main.async {
                     router.route(to: .unauthenticated)
+                }
+            case .loading:
+                DispatchQueue.main.async {
+                    router.route(to: .loading)
                 }
             }
         })
     }
 }
 
-struct LoadingView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        LoadingView()
+        MainView()
     }
 }

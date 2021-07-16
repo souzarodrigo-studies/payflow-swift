@@ -13,10 +13,10 @@ class AuthenticationManager: NSObject, ObservableObject {
     enum SignInState {
         case signedIn
         case signedOut
+        case loading
     }
     
     @Published var state: SignInState = .signedOut
-    @Published var isLoading: Bool = false
     @Published var user: GIDGoogleUser!
     
     override init() {
@@ -27,7 +27,7 @@ class AuthenticationManager: NSObject, ObservableObject {
     
     func signIn() {
         
-        self.isLoading = true
+        state = .loading
         if GIDSignIn.sharedInstance().currentUser == nil {
             DispatchQueue.main.async(execute: {
                 GIDSignIn.sharedInstance().presentingViewController = UIApplication.shared.windows.first?.rootViewController
@@ -37,16 +37,14 @@ class AuthenticationManager: NSObject, ObservableObject {
     }
     
     func signOut() {
-        self.isLoading = true
+        state = .loading
         GIDSignIn.sharedInstance().signOut()
         
         do {
             try Auth.auth().signOut()
             
             state = .signedOut
-            self.isLoading = false
         } catch let signOutError as NSError {
-            self.isLoading = false
             print(signOutError.localizedDescription)
         }
     }
@@ -76,7 +74,6 @@ extension AuthenticationManager: GIDSignInDelegate {
                 } else {
                     self.state = .signedIn
                     self.user = GIDSignIn.sharedInstance().currentUser
-                    self.isLoading = false
                 }
             }
         }

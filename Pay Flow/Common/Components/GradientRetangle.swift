@@ -16,7 +16,7 @@ struct GradientRetangle: View {
     var body: some View {
         Rectangle()
             .fill(
-                RadialGradient(gradient: gradient, center: .bottom, startRadius: (height / 3), endRadius: height)
+                RadialGradient(gradient: gradient, center: .bottom, startRadius: (1 * factorOfStatedRadius), endRadius: height)
             )
             .edgesIgnoringSafeArea(.all)
             .frame(height: height)
@@ -26,6 +26,6 @@ struct GradientRetangle: View {
 
 struct GradientRetangle_Previews: PreviewProvider {
     static var previews: some View {
-        GradientRetangle(height: CGFloat(200), factorOfStatedRadius: CGFloat(0.5))
+        GradientRetangle(height: CGFloat(200), factorOfStatedRadius: CGFloat(0.9))
     }
 }

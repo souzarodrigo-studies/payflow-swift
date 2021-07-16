@@ -10,12 +10,15 @@ import Stinsen
 
 struct HomeScreen<Presenter: HomePresenting>: View {
     @EnvironmentObject var mainRouter: ViewRouter<MainCoordinator.Route>
-    @EnvironmentObject var authenticatedRouter: NavigationRouter<AuthenticatedCoordinator.Route>
+    @EnvironmentObject var authenticatedRouter: ViewRouter<AuthenticatedCoordinator.Route>
     @EnvironmentObject var manager: AuthenticationManager
     
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     
     @ObservedObject private var presenter: Presenter
+    
+    let boundsListOffset = CGFloat(120)
+    let boundsRegisterOffset = CGFloat(20)
     
     init(presenter: Presenter) {
         self.presenter = presenter
@@ -23,19 +26,25 @@ struct HomeScreen<Presenter: HomePresenting>: View {
     
     var body: some View {
         NavigationView {
-            ZStack(alignment: .top) {
-                GradientRetangle(height: CGFloat(60), factorOfStatedRadius: CGFloat(0.7))
-                
-                HomeHeader(name: manager.user.profile.name, image: manager.user.profile.imageURL(withDimension: 48).absoluteString)
-
-                RegisteredCard()
-                .offset(y: 25)
-                
+            GeometryReader { bounds in
+                ZStack(alignment: .top) {
+                    GradientRetangle(height: CGFloat(60), factorOfStatedRadius: CGFloat(1))
+                    
+                    HomeHeader(name: manager.user.profile.name, image: manager.user.profile.imageURL(withDimension: 48).absoluteString)
+                    
+                    RegisteredCard()
+                        .offset(y: boundsRegisterOffset)
+                    
+                    ListOfTickets()
+                        .frame(height: bounds.size.height - 140)
+                        .offset(y: boundsListOffset)
+                    
+                }
+                .frame(maxHeight: .infinity, alignment: .top)
+                .navigationBarHidden(true)
             }
-            .frame(maxHeight: .infinity, alignment: .top)
-            .background(Color(.systemBackground))
-            .navigationBarHidden(true)
         }
+        .background(Color(.clear))
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }

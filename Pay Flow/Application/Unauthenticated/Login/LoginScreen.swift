@@ -28,7 +28,7 @@ struct LoginScreen<Presenter: LoginPresenting>: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
-                GradientRetangle(height: CGFloat(170), factorOfStatedRadius: CGFloat(0.5))
+                GradientRetangle(height: CGFloat(170), factorOfStatedRadius: CGFloat(0.9))
                 
                 VStack {
                     Image(colorScheme == .dark ? "Login Image Dark" : "Login Image")
@@ -73,18 +73,6 @@ struct LoginScreen<Presenter: LoginPresenting>: View {
                     .padding()
                 }
                 .offset(y: -70)
-                
-                VStack(alignment: .center) {
-                    Text("Loading...")
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle())
-                }
-                .padding(10)
-                .background(Color.secondary.colorInvert())
-                .foregroundColor(Color.primary)
-                .cornerRadius(20)
-                .opacity(manager.isLoading ? 1 : 0)
-                
             }
             .frame(maxHeight: .infinity, alignment: .top)
             .background(Color(.systemBackground))

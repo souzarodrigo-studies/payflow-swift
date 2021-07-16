@@ -8,21 +8,43 @@
 import SwiftUI
 import Stinsen
 
-class AuthenticatedCoordinator: NavigationCoordinatable {
-    var navigationStack = NavigationStack()
+final class AuthenticatedCoordinator: ViewCoordinatable {
+    var children = ViewChild()
 
-    enum Route: NavigationRoute {
-
+    enum Route: ViewRoute {
+//        case unauthenticated
+//        case authenticated
+//        case loading
     }
     
-    func resolveRoute(route: Route) -> Transition {
-
+    func resolveRoute(route: Route) -> AnyCoordinatable {
+//        switch route {
+//        case .unauthenticated:
+//            return AnyCoordinatable(
+//                NavigationViewCoordinatable(
+//                     UnauthenticatedCoordinator()
+//                )
+//            )
+//        case .authenticated:
+//            return AnyCoordinatable(
+//                NavigationViewCoordinatable(
+//                     AuthenticatedCoordinator()
+//                )
+//            )
+//        case .loading:
+//            return AnyCoordinatable(
+//                NavigationViewCoordinatable(
+//                    LoadingCoordinator()
+//                )
+//            )
+//        }
     }
     
     @discardableResult
     func start() -> some View {
-        let view = HomeFactory.make(with: HomeViewModel())
-        return view
+//        let view = HomeFactory.make(with: HomeViewModel())
+//        return view
+        return ToolBar()
     }
     
     init() {
